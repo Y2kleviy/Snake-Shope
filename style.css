@@ -1,6 +1,6 @@
 body {
     background-color: rgb(0, 0, 0);
-   background-image: url('pasta/onde/a/imagem/está/NOVO.gif');
+   background-image: url('NOVO.gif');
     z-index: -1;
     background-size: cover; /* Ou 'contain', dependendo do efeito desejado */
     background-position: center;
