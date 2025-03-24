@@ -1,3 +1,4 @@
+/* Fundo da página */
 body {
     background-color: rgb(0, 0, 0);
     background-image: url(NOVO.gif);
@@ -116,7 +117,7 @@ h3#prin {
     transition: 0.6s;
 }
 
-/* Responsividade */
+/* Responsividade para a pesquisa */
 @media screen and (max-width: 600px) {
     .searchbox {
         justify-content: center;
@@ -147,21 +148,32 @@ h3#prin {
     }
 }
 
-/* Estilo dos produtos */
+/* Container dos produtos */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Estilização dos produtos */
 .product {
     border: 1px solid #ccc;
     padding: 16px;
     text-align: center;
-    width: 200px;
+    width: calc(50% - 20px); /* Garante dois produtos por linha */
+    max-width: 200px;
     height: auto;
     margin: 10px;
     border-radius: 10px;
     border-color: white;
-    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
 }
 
 .product img {
-    width: 200px;
+    width: 100%;
     height: auto;
     border-radius: 8px;
 }
@@ -176,7 +188,7 @@ h3#prin {
     font-size: 1.1em;
 }
 
-/* Efeito hover */
+/* Efeito hover nos produtos */
 .product img:hover {
     transform: scale(1.05);
     transition: 0.3s;
@@ -186,4 +198,11 @@ h3#prin {
     border-color: green;
     transform: scale(1.05);
     transition: 0.4s;
+}
+
+/* Responsividade dos produtos */
+@media screen and (max-width: 600px) {
+    .product {
+        width: calc(50% - 10px); /* Garante dois produtos por linha em telas menores */
+    }
 }
