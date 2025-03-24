@@ -1,6 +1,6 @@
 body {
     background-color: rgb(0, 0, 0);
-    background-image: url(imagens/NOVO.gif);
+    background-image: url(NOVO.gif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -104,7 +104,7 @@ h3#prin {
     border: 1px solid #ccc;
     border-radius: 10px;
     cursor: pointer;
-    background-image: url('imagens/carrinho.png');
+    background-image: url('carrinho.png');
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: 10px center;
