@@ -1,48 +1,49 @@
 body {
     background-color: rgb(0, 0, 0);
-    background-image: url(NOVO.gif);
-    z-index: -1;
-    background-size: cover; /* Ou 'contain', dependendo do efeito desejado */
+    background-image: url(imagens/NOVO.gif);
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
-    
 }
 
-.refrao{
+/* Barra colorida */
+.refrao {
     background-color: rgb(61, 150, 34);
-    padding: px;
     text-align: center;
     margin-top: -20px;
     height: 35px;
-    transition: 0.3ms;
-}
-.refrao:hover{background-color: rgb(33, 146, 29);
+    transition: 0.3s;
 }
 
+.refrao:hover {
+    background-color: rgb(33, 146, 29);
+}
+
+/* Hover no botão principal */
 .principal:hover {
     background-color: rgb(145, 27, 192);
 }
 
+/* Texto principal */
 h3#prin {
-    color: rgb(255, 255, 255);
+    color: white;
     text-align: center;
     font-size: 16px;
 }
 
-/* Caixa de pesquisa responsiva */
+/* Caixa de pesquisa */
 .searchbox {
     padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Mantém um espaço entre os elementos */
-    flex-wrap: nowrap; /* Garante que os elementos fiquem na mesma linha */
+    gap: 10px;
 }
 
-/* Rayquaza sempre ao lado da barra */
+/* Rayquaza ao lado da barra */
 .rayquaza {
     width: 80px;
     height: auto;
@@ -57,7 +58,7 @@ h3#prin {
     max-width: 500px;
 }
 
-/* Barra de pesquisa responsiva */
+/* Barra de pesquisa */
 .pesquisa {
     text-align: center;
     border-radius: 70px;
@@ -68,46 +69,72 @@ h3#prin {
     border: 2px solid rgb(43, 185, 74);
     color: white;
     font-size: 16px;
-    padding: 10px 40px; /* Espaço para a lupa */
+    padding: 10px 40px;
 }
 
-/* Lupa dentro do input */
+/* Lupa no input */
 .lupa {
     width: 20px;
     position: absolute;
     right: 15px;
 }
 
-/* 📌 Responsividade para telas menores */
+/* Botão de login */
+.login {
+    width: 120px;
+    height: 44px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.login:hover {
+    background-color: rgb(9, 110, 9);
+    transition: 0.6s;
+}
+
+/* Botão do carrinho */
+.carrinho {
+    width: 120px;
+    height: 44px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: url('imagens/carrinho.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 40px; /* Ajuste para a imagem */
+}
+
+.carrinho:hover {
+    background-color: rgb(9, 110, 9);
+    transition: 0.6s;
+}
+
+/* Responsividade */
 @media screen and (max-width: 600px) {
     .searchbox {
-        flex-wrap: nowrap; /* Garante que os elementos fiquem na mesma linha */
         justify-content: center;
     }
 
     .rayquaza {
-        width: 50px; /* Reduz o tamanho do Rayquaza */
+        width: 50px;
     }
 
     .pesquisa {
-        width: 80%; /* Ajusta o tamanho da barra de pesquisa */
+        width: 80%;
         max-width: 250px;
     }
 
     .lupa {
-        right: 10px; /* Ajusta a posição da lupa */
+        right: 10px;
     }
-}
-/* 🖥️ No PC, a barra de pesquisa fica sempre visível */
-.pesquisa {
-    display: block;
-    width: 100%;
-    max-width: 500px;
-    transition: width 0.3s ease-in-out;
-}
 
-/* 📱 No celular, a barra de pesquisa começa oculta */
-@media screen and (max-width: 600px) {
     .pesquisa {
         display: none;
         width: 0;
@@ -119,43 +146,44 @@ h3#prin {
         max-width: 250px;
     }
 }
+
+/* Estilo dos produtos */
 .product {
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     padding: 16px;
     text-align: center;
     width: 200px;
-    height: 200%;
+    height: auto;
     margin: 10px;
     border-radius: 10px;
-    border-color: rgb(255, 255, 255);
-    
-  }
-  
-  .product img{
+    border-color: white;
+    display: inline-block;
+}
+
+.product img {
     width: 200px;
-    height: 200%;
+    height: auto;
     border-radius: 8px;
-  }
-  
-  .product h3 {
+}
+
+.product h3 {
     font-size: 1.2em;
     color: antiquewhite;
-  }
-  
-  .product .price {
+}
+
+.product .price {
     color: white;
     font-size: 1.1em;
-  }
-  .product{
-    display:inline-block;
-  }
-  .product img:hover{
-    transform: scale(1.05);
-    transition: .3s;
+}
 
-  }
-.product:hover{
+/* Efeito hover */
+.product img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.product:hover {
     border-color: green;
     transform: scale(1.05);
-    transition: .6s;
+    transition: 0.4s;
 }
