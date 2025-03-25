@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,60 +8,82 @@
     <link rel="shortcut icon" href="rayquaza.png" type="image/x-icon">
 </head>
 <body>
-  <div class="refrao">
-    <h3>melhor loja de games da cidade🐍🔥</h3>
-  </div>
-  <div class="searchbox">
-    <img class="rayquaza" src="rayquaza.png" alt="Rayquaza">
-    <div class="input-container">
-        <input class="pesquisa" type="text" placeholder="Procure pelo nome do produto">
-        <img src="lupa.png" alt="Lupa" class="lupa" 
-        onclick="toggleSearch()">
+
+    <!-- Barra de anúncio -->
+    <div class="refrao">
+        <h3>Melhor loja de games da cidade🐍🔥</h3>
     </div>
- <input class="login" type="button" value="fazer login">
- <input class="carrinho" type="button" value="Carrinho" >
-    
-</div>
-<div class="product">
-  <img src="minecraft.png" alt="Produto">
-  <h3>minecraft bedrock</h3>
-  <p class="price">R$ 22,50</p>
-  <button onclick="addToCart()">Adicionar ao Carrinho</button>
-</div>
-<div class="product">
-  <img src="netflix.png" alt="Produto">
-  <h3>minecraft bedrock</h3>
-  <p class="price">R$ 22,50</p>
-  <button onclick="addToCart()">Adicionar ao Carrinho</button>
-</div>
-<div class="product">
-  <img src="GAMEPASS.png" alt="Produto">
-  <h3>minecraft bedrock</h3>
-  <p class="price">R$ 22,50</p>
-  <button onclick="addToCart()">Adicionar ao Carrinho</button>
-</div>
-</div>
-<div class="product">
-  <img src="NITRO.png" alt="Produto">
-  <h3>minecraft bedrock</h3>
-  <p class="price">R$ 22,50</p>
-  <button onclick="addToCart()">Adicionar ao Carrinho</button>
-</div>
-<div class="product">
-  <img src="spotifyf.png" alt="Produto">
-  <h3>spotify premiun</h3>
-  <p class="price">R$ 16,50</p>
-  <button onclick="addToCart()">Adicionar ao Carrinho</button>
-</div>
+
+    <!-- Barra de pesquisa e botões -->
+    <div class="searchbox">
+        <img class="rayquaza" src="rayquaza.png" alt="Rayquaza">
+        <div class="input-container">
+            <input class="pesquisa" type="text" placeholder="Procure pelo nome do produto">
+            <img src="imagens/lupa.png" alt="Lupa" class="lupa" onclick="toggleSearch()">
+        </div>
+        <input class="login" type="button" value="Fazer Login">
+        <input class="carrinho" type="button" value="Carrinho">
+    </div>
+
+    <!-- Produtos -->
+    <div class="products-container">
+        <div class="product">
+            <img src="minecraft.png" alt="Minecraft Bedrock">
+            <h3>Minecraft Bedrock</h3>
+            <p class="price">R$ 22,50</p>
+            <button onclick="addToCart()">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="netflix.png" alt="Netflix">
+            <h3>Netflix</h3>
+            <p class="price">R$ 22,50</p>
+            <button onclick="addToCart()">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="GAMEPASS.png" alt="Game Pass">
+            <h3>Game Pass</h3>
+            <p class="price">R$ 22,50</p>
+            <button onclick="addToCart()">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="NITRO.png" alt="Discord Nitro">
+            <h3>Discord Nitro</h3>
+            <p class="price">R$ 22,50</p>
+            <button onclick="addToCart()">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="spotifyf.png" alt="Spotify Premium">
+            <h3>Spotify Premium</h3>
+            <p class="price">R$ 16,50</p>
+            <button onclick="addToCart()">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Redes sociais -->
+    <div class="redes">
+        <div class="logos">
+            <a href="https://discord.gg/tc3PDE89"><img src="discord.png" alt="Discord"></a>
+        </div>
+        <div class="logos">
+            <a href="https://www.instagram.com/leviy6k?igsh=MTcyam5vY2RodnpnMg=="><img src="insta.png" alt="Instagram"></a>
+        </div>
+        <div class="logos">
+            <a href="https://discord.gg/tc3PDE89"><img src="ttk.png" alt="TikTok"></a>
+        </div>
+    </div>
+
+    <script>
+        function toggleSearch() {
+            let input = document.querySelector(".pesquisa");
+            if (window.innerWidth <= 600) {
+                input.classList.toggle("ativa");
+            }
+        }
+    </script>
 
 </body>
-<script>
-  function toggleSearch() {
-      let input = document.querySelector(".pesquisa");
-      if (window.innerWidth <= 600) { // Só funciona no celular
-          input.classList.toggle("ativa");
-      }
-  }
-</script>
-
 </html>
